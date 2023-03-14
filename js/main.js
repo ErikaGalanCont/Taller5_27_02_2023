@@ -1,8 +1,9 @@
-// Desarrolle un algoritmo que realice la sumatoria de los números enteros comprendidos entre el 1 y el 1O, es decir, 1 + 2 + 3 + .... + 1O
-let sumatoria = 0;
 
-for (let i = 1; i <= 10; i++) {
-    sumatoria += i;
-}
+let catetoA = parseFloat(prompt("Introduce la longitud del cateto A: "));
+let catetoB = parseFloat(prompt("Introduce la longitud del cateto B: "));
 
-console.log("La sumatoria de los números enteros del 1 al 10 es: " + sumatoria);
+
+let hipotenusa = (catetoA ** 2 + catetoB ** 2) ** 0.5;
+
+hipotenusa = hipotenusa.toFixed(2);
+console.log(`La longitud de la hipotenusa es: ${hipotenusa}`);
