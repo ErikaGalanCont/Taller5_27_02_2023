@@ -1,18 +1,16 @@
-//Desarrolle un algoritmo que permita determinar el área lateral y volumen de un cilindro dado su radio (R) y altura (H). Formula: (VOL = π * R^2 * H), (AREA_LATERAL = 2 * π * R * H)
+//"Desarrolle un algoritmo para la empresa Constructora Tecnovivir Casas C.A., que le permita calcular e" imprimir la nómina para su cancelación a un total de 50 obreros calificados a quienes debe cancelar por horas trabajadas. Lahora trabajada se pautó en 30.000 Bolívares.
 
+let costoHora = 30000; 
+let numObreros = 50; 
 
-let numeros = [];
+let horasTrabajadas = []; 
 
-for (let i = 0; i < 2; i++) {
-    numeros[i] = parseInt(prompt("Ingrese el numero " + (i+1) + ": "));
+for (let i = 0; i < numObreros; i++) {
+    horasTrabajadas[i] = parseInt(prompt("Ingrese las horas trabajadas por el obrero " + (i+1) + ": "));
 }
 
-for (let i = 0; i < 1; i++) {
-    for (let j = 0; j < 1; j++) {
-        if (numeros[j] > numeros[j+1]) {
-            [numeros[j], numeros[j+1]] = [numeros[j+1], numeros[j]];
-        }
-    }
-}
+let totalHoras = horasTrabajadas.reduce((a, b) => a + b, 0); 
+let totalPagar = totalHoras * costoHora; 
 
-console.log("Los numeros ordenados de menor a mayor son: " + numeros[0] + ", " + numeros[1]);
+console.log("El total de horas trabajadas es: " + totalHoras);
+console.log("El monto total a pagar es: " + totalPagar + " Bolívares");
