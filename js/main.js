@@ -1,16 +1,18 @@
 //Desarrolle un algoritmo que permita determinar el área lateral y volumen de un cilindro dado su radio (R) y altura (H). Formula: (VOL = π * R^2 * H), (AREA_LATERAL = 2 * π * R * H)
 
 
-let pi = Math.PI;
-console.log(pi);
+let numeros = [];
 
-let radio = prompt("Introduce el radio del cilindro");
-let altura = prompt("Introduce la altura del cilindro");
+for (let i = 0; i < 2; i++) {
+    numeros[i] = parseInt(prompt("Ingrese el numero " + (i+1) + ": "));
+}
 
-let volumen = pi * radio ** 2 * altura;
-let areaLateral = 2 * pi * radio * altura;
+for (let i = 0; i < 1; i++) {
+    for (let j = 0; j < 1; j++) {
+        if (numeros[j] > numeros[j+1]) {
+            [numeros[j], numeros[j+1]] = [numeros[j+1], numeros[j]];
+        }
+    }
+}
 
-console.log("El volumen del cilindro es: " + volumen);
-console.log("El área lateral del cilindro es: " + areaLateral);
-
-
+console.log("Los numeros ordenados de menor a mayor son: " + numeros[0] + ", " + numeros[1]);
